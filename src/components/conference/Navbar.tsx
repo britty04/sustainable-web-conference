@@ -12,16 +12,22 @@ export const Navbar = () => {
     { label: "Schedule", href: "#schedule" },
     { label: "Speakers", href: "#speakers" },
     { label: "Papers", href: "#papers" },
+    { label: "FAQ", href: "#faq" },
   ];
+
+  const scrollToSection = (href: string) => {
+    setIsMenuOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary via-secondary to-accent animate-pulse" />
-            <span className="font-bold text-xl text-primary">ICSDT</span>
-          </div>
+          <span className="font-bold text-xl text-primary">ICSDT 2025</span>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
@@ -29,12 +35,13 @@ export const Navbar = () => {
               <NavigationMenuList>
                 {menuItems.map((item) => (
                   <NavigationMenuItem key={item.label}>
-                    <a
-                      href={item.href}
+                    <Button
+                      variant="ghost"
                       className="px-4 py-2 text-sm hover:text-primary transition-colors"
+                      onClick={() => scrollToSection(item.href)}
                     >
                       {item.label}
-                    </a>
+                    </Button>
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
@@ -56,14 +63,14 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-2">
             {menuItems.map((item) => (
-              <a
+              <Button
                 key={item.label}
-                href={item.href}
-                className="block px-4 py-2 text-sm hover:bg-accent/10 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
+                variant="ghost"
+                className="w-full text-left justify-start"
+                onClick={() => scrollToSection(item.href)}
               >
                 {item.label}
-              </a>
+              </Button>
             ))}
           </div>
         )}

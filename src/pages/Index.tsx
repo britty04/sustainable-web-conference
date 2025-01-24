@@ -8,6 +8,7 @@ import { Objectives } from "@/components/conference/Objectives";
 import { Navbar } from "@/components/conference/Navbar";
 import { Collaboration } from "@/components/conference/Collaboration";
 import { FAQ } from "@/components/conference/FAQ";
+import { ChatbotWidget } from "@/components/conference/ChatbotWidget";
 import { useToast } from "@/hooks/use-toast";
 import { useEffect } from "react";
 
@@ -40,6 +41,7 @@ const Index = () => {
       <Schedule />
       <FAQ />
       <Footer />
+      <ChatbotWidget />
     </div>
   );
 };

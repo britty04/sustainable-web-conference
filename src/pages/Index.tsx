@@ -5,10 +5,12 @@ import { Schedule } from "@/components/conference/Schedule";
 import { Footer } from "@/components/conference/Footer";
 import { PaperSubmission } from "@/components/conference/PaperSubmission";
 import { Objectives } from "@/components/conference/Objectives";
+import { Navbar } from "@/components/conference/Navbar";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <Hero />
       <About />
       <Objectives />

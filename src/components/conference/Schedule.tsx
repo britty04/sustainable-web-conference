@@ -31,17 +31,17 @@ const scheduleData = [
 
 export const Schedule = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50" id="schedule">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">Conference Schedule</h2>
         <Tabs defaultValue="day1" className="max-w-4xl mx-auto">
           <TabsList className="grid w-full grid-cols-1 mb-8">
-            <TabsTrigger value="day1">June 8, 2025</TabsTrigger>
+            <TabsTrigger value="day1">August 6, 2025</TabsTrigger>
           </TabsList>
           <TabsContent value="day1">
             <div className="space-y-4">
               {scheduleData.map((item, index) => (
-                <Card key={index}>
+                <Card key={index} className="transform hover:scale-[1.01] transition-transform">
                   <CardHeader className="py-4">
                     <div className="flex items-center justify-between">
                       <CardTitle className="text-lg">{item.title}</CardTitle>

@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
-import { useMediaQuery } from "react-use";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 type Message = {
   type: "user" | "bot";
@@ -58,7 +58,6 @@ export const ChatbotWidget = () => {
 
   const simulateTyping = async (response: string) => {
     setIsTyping(true);
-    // Simulate natural typing delay
     await new Promise((resolve) => setTimeout(resolve, 1500));
     setMessages((prev) => [...prev, { type: "bot", content: response }]);
     setIsTyping(false);

@@ -9,7 +9,7 @@ export const Hero = () => {
           International Conference on Sustainable Digital Transformation
         </h1>
         <p className="text-xl md:text-2xl mb-6">ICSDT 2025</p>
-        <p className="text-lg md:text-xl mb-8">June 8, 2025 • Nilai, Malaysia</p>
+        <p className="text-lg md:text-xl mb-8">August 6, 2025 • Nilai, Malaysia</p>
         <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
           Register Now
         </Button>

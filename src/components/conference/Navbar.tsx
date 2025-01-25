@@ -24,20 +24,22 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-white/80 border-b border-gray-200/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <span className="font-bold text-xl text-primary">ICSDT 2025</span>
+          <span className="font-bold text-xl text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
+            ICSDT 2025
+          </span>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <NavigationMenu>
-              <NavigationMenuList>
+              <NavigationMenuList className="space-x-1">
                 {menuItems.map((item) => (
                   <NavigationMenuItem key={item.label}>
                     <Button
                       variant="ghost"
-                      className="px-4 py-2 text-sm hover:text-primary transition-colors"
+                      className="px-4 py-2 text-sm hover:bg-primary/10 transition-colors rounded-full"
                       onClick={() => scrollToSection(item.href)}
                     >
                       {item.label}
@@ -61,12 +63,12 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-2">
+          <div className="md:hidden py-4 space-y-2 animate-fade-in">
             {menuItems.map((item) => (
               <Button
                 key={item.label}
                 variant="ghost"
-                className="w-full text-left justify-start"
+                className="w-full text-left justify-start hover:bg-primary/10 rounded-lg"
                 onClick={() => scrollToSection(item.href)}
               >
                 {item.label}

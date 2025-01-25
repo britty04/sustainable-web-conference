@@ -62,4 +62,12 @@
   .glass-morphism {
     @apply backdrop-blur-xl bg-background/5 border border-border/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)];
   }
+
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10 rounded-xl shadow-xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
 }

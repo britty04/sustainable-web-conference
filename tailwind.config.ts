@@ -27,14 +27,17 @@ export default {
         primary: {
           DEFAULT: "#1a365d",
           foreground: "#ffffff",
+          dark: "#0f172a",
         },
         secondary: {
           DEFAULT: "#2d6a4f",
           foreground: "#ffffff",
+          dark: "#1e3a8a",
         },
         accent: {
           DEFAULT: "#0d9488",
           foreground: "#ffffff",
+          dark: "#0f766e",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -88,7 +91,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
-        "float": "float 6s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
         "spin-slow": "spin-slow 20s linear infinite",
         "bounce-slow": "bounce-slow 6s ease-in-out infinite",
       },

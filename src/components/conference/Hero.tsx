@@ -43,7 +43,7 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10"
+              className="border-white text-black bg-white hover:bg-white/90 hover:text-black"
             >
               Submit Paper
             </Button>
